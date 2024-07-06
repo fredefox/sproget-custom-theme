@@ -1,0 +1,17 @@
+{
+  "name": "Custom theme for sproget.dk",
+  "description": "Custom theme for sproget.dk",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "favicon.png",
+    "32": "favicon.png",
+    "64": "favicon.png"
+  },
+  "content_scripts": [
+    {
+      "css": ["main.css"],
+      "matches": ["https://sproget.dk/*"]
+    }
+  ]
+}
