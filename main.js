@@ -11,7 +11,9 @@ const main = () => {
   });
   $grid.classList.add("grid");
   $footer.prepend($grid);
-  document.querySelector(".smallSearchButton").value = "Søg";
+  document
+    .querySelectorAll(".searchButton, .smallSearchButton")
+    .forEach((e) => (e.value = "Søg"));
 };
 
 main();

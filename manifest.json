@@ -12,7 +12,7 @@
     {
       "css": ["main.css"],
       "js": ["main.js"],
-      "matches": ["https://sproget.dk/lookup*"]
+      "matches": ["https://sproget.dk/*"]
     }
   ]
 }
