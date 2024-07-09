@@ -35,6 +35,8 @@
 body {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size:15px;
+  margin: 2ex;
+  max-width: 80em;
 }
 .social_media_toolbox {
   display:none;
@@ -541,7 +543,7 @@ html {
   color:white;
   background-color:#950313;
   float:left;
-  width:930px;
+  /* width:930px; */
   height:240px;
   margin:0;
   margin-bottom:30px;
@@ -588,7 +590,6 @@ html {
   float:left;
   width:100%;
   height: unset;
-  margin-top: 2ex;
   background: linear-gradient(to right, #950313 0.47%, #c70524);
   border-radius: 5px;
 }
@@ -672,7 +673,7 @@ h1#searchbox-headline-frontpage {
 }
 #searchbox-explanation-box {
   float: left;
-  width: 300px;
+  /* width: 300px; */
   margin: 17px 0 0 34px;
   padding: 30px 15px 20px 0;
   position: relative;
@@ -684,7 +685,7 @@ h1#searchbox-headline-frontpage {
 }
 .searchField {
   width:406px;
-  height:30px;
+  /* height:30px; */
 }
 input.searchField {
   background: url(search_bar_bg.png) no-repeat 0 0 transparent;
@@ -699,26 +700,28 @@ input[type="password"]:focus,
 textarea:focus {
   background: url(search_bar_bg.png) no-repeat 0 0 transparent;
 }
-#portal-header .searchButton {
-  background:url(search-button.png) no-repeat;
-  cursor:pointer;
-  width: 150px;
-  height: 101px;
-  border: none;
-  float:right;
-  position:relative;
-  left: 350px;
-  top:-28px;
-}
+/* #portal-header .searchButton { */
+/*   background:url(search-button.png) no-repeat; */
+/*   cursor:pointer; */
+/*   width: 150px; */
+/*   height: 101px; */
+/*   border: none; */
+/*   float:right; */
+/*   height: initial; */
+/*   position:relative; */
+/*   left: 350px; */
+/*   top:-28px; */
+/* } */
 #portal-globalnav li a {
   border: none;
 }
 .smallSearchButton {
-  background:url(small-search-button.png) no-repeat;
-  width: 113px;
-  height: 76px;
+  background: transparent;
+  appearance: button;
+  font-size: initial;
+  border: 2px solid white;
+  padding: 1ex;
   cursor:pointer;
-  border: none;
   position:relative;
   top: -49px;
   right: 12px;
@@ -755,9 +758,6 @@ textarea:focus {
 #small-searchbox-links a {
   color:white;
 }
-#portal-column-content {
-  padding-top: 62px;
-}
 .portaltype-document  #portal-column-content,
 .portaltype-news-item #portal-column-content {
   vertical-align:top;
@@ -776,9 +776,6 @@ textarea:focus {
 }
 .template-frontpage_view #viewlet-above-content {
   padding: 10px 0 0px 10px;
-}
-#content {
-  font-size: 87%;
 }
 .documentEditable #content div h1.documentFirstHeading {
   background-position: 0 33px;
@@ -807,9 +804,6 @@ div#content > div.documentDescription {
 }
 .documentEditable div#edit-bar {
   margin-top:0px;
-}
-#content > div:first-child {
-  margin-top: -70px;
 }
 .portaltype-documentwithoutnews #content > div:first-child {
   margin-top: -89px;
@@ -1046,15 +1040,20 @@ div.listingBar a {
 *:first-child+html #portal-columns {
   margin-bottom: 0;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-direction: horizontal; */
+}
 #sproget-footer > img {
   z-index: 3;
   margin-top: -3px;
   position: relative;
+  display: none;
 }
 .footerBox {
   float:left;
   position: relative;
-  width:197px;
   height:230px;
   overflow:hidden;
   padding:20px;
@@ -1201,10 +1200,7 @@ div.listingBar a {
   background-color: #427a8a;
   border-radius: 4px 4px 4px 4px;
   color: white;
-  margin-left: -5px;
-  padding-bottom: 6px;
-  padding-left: 7px;
-  padding-top: 6px;
+  padding: 1ex;
 }
 .search-results h3 {
   color: #003366;
@@ -1231,7 +1227,7 @@ div.listingBar a {
 .search-results .home-link {
   display: block;
   margin-top: -8px;
-  color: #aaa;
+  color: darkgrey;
   font-size: 90%;
 }
 .search-results a {
@@ -1836,7 +1832,6 @@ h3.sumsearch ,h3 .sumsearch a, h3.sumsearch  a:link, h3.sumsearch a:visited{
   color:#999999;
   background-color:transparent;
   padding-top:10px;
-  /* width:948px; */
 }
 #red-triangle {
   position:relative;
@@ -2011,7 +2006,7 @@ dl.portletNews a.blueTriangle {
   border-radius: 0 4px 4px 0;
 }
 .paperEffectImage {
-  z-index: 3;
+  display: none;
 }
 .section-front-page  .paperEffectImage {
   display: block;
@@ -2219,11 +2214,11 @@ table.layout tr td:first-child .frontPageBox {
 #small-searchbox-border #nolivesearchGadget {
   background: white;
   width:290px;
-  height: unset;
-  line-height: 27px;
+  line-height: normal;
   position:relative;
   right:20px;
-  margin-top: 19px;
+  margin-left: 2ex;
+  padding: 1ex;
 }
 #content h1.documentFirstHeading {
   color:black;
@@ -3032,14 +3027,13 @@ sup {
   float:unset;
   margin-left: 2ex;
   width: 100%;
+  margin-top: 1ex;
+  margin-bottom: 1ex;
 }
 .smallSearchButton {
   position: unset;
   float: unset;
   color: white;
-}
-.smallSearchButton:after {
-  content: "Søg";
 }
 #content p, ul, ol, li, .bogspalte {
   color: unset;
@@ -3049,13 +3043,12 @@ sup {
   border-left: 0px;
   border-right: 0px;
 }
-#small-searchbox-border,
-#content {
+#small-searchbox-border {
   margin-left: 1ex;
   margin-right: 1ex;
 }
 #portal-columns {
-  max-width: unset;
+  width: 100%;
 }
 #content,
 #content p,
@@ -3064,6 +3057,17 @@ input.searchField,
 .box-block {
   font-size: unset;
 }
-html, body {
+html {
   margin: 0px;
+}
+
+#portal-globalnav,
+.hiddenStructure,
+.portal-logo,
+.portal-siteaction {
+  display: none;
+}
+
+#ordboger {
+  display: initial !important;
 }

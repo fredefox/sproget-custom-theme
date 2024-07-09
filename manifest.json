@@ -11,8 +11,8 @@
   "content_scripts": [
     {
       "css": ["main.css"],
-      "css": ["main.js"],
-      "matches": ["https://sproget.dk/*"]
+      "js": ["main.js"],
+      "matches": ["https://sproget.dk/lookup*"]
     }
   ]
 }
