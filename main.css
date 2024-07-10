@@ -655,6 +655,7 @@ textarea:focus {
   padding: 1ex;
   cursor:pointer;
   position:relative;
+  color: white;
 }
 #portal-globalnav {
   margin-bottom:0;
